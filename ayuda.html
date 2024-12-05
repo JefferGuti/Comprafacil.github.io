@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Encargada del responsive - autoajustable-->
+    <title>Proyecto Talento Tech</title>
+    <link rel="stylesheet" href="../static/style.css"> <!--Enlace para conexión con css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> <!--para instalación de iconos de Bootstrap-->
+</head>
+<body>
+
+    <header>
+
+        <!--Encabezado-->
+        
+    <h5>CompraFácil.com</h5>
+    <a href="{{ url_for('index') }}"><img class="Logo" src="../static/img/Logo.png" alt="logopagina" width="60px" height="60px"></a>
+
+    <!--BR es un Salto de linea-->
+            <!--Inicio navegación-->
+
+      <a class="Inicio" href="{{ url_for('iniciosesion') }}">Iniciar Sesión</a>
+      <a class="carrito_compras" href="{{ url_for('carrito') }}"><i class="bi bi-cart4"></i></a>
+        <input class="buscador" placeholder="Buscador">
+    </header>
+
+
+        <!--Menú-->
+        <nav class="menu">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                <li><a href="">Categorías</a>
+                    <ul>
+                        <li><a href="{{ url_for('mercado') }}">SuperMercado</a></li>
+                    </ul>
+                </li>
+            
+                <li><a href="{{ url_for('cupones') }}">Cupones</a></li>
+                <li><a href="{{ url_for('ayuda') }}">Ayuda</a></li></li>
+            </ul>
+        </nav>
+
+      <!--Inicio formulario-->
+
+      <section class="formatoformulario">
+        <div class="contact_form">
+            <h2>¿En qué podemos ayudarte?</h2>
+
+            <form id="contactForm">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="resultado"></p>
+
+        </div>
+        
+    </section>
+         
+    <!--Pie de pagina-->
+
+    <footer>
+        <ul>
+            <li><a href="{{ url_for('terminoscondiciones') }}">Términos y condiciones</a></li>
+            <li><a href="{{ url_for('terminoscondiciones') }}">Promociones</a></li>
+            <li><a href="{{ url_for('terminoscondiciones') }}">Política de privacidad</a></li>
+            <a class="Icono" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+            <a class="Icono" href="https://web.whatsapp.com/"><i class="bi bi-whatsapp"></i></a>
+            <a class="Icono" href="https://www.instagram.com/?hl=es"><i class="bi bi-instagram"></i></a>
+            <a class="Icono" href=https://x.com/?lang><i class="bi bi-twitter-x"></i></a>
+        <p>&copy; 2024 CompraFácil.com. <br> Todos los derechos reservados. Colombia.</p>
+        
+
+    
+    </footer>
+    
+    <script src="../static/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Encargada del responsive - autoajustable-->
+    <title>Proyecto Talento Tech</title>
+    <link rel="stylesheet" href="../static/style.css"> <!--Enlace para conexión con css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> <!--para instalación de iconos de Bootstrap-->
+</head>
+<body>
+
+    <header>
+
+        <!--Encabezado-->
+        
+    <h5>CompraFácil.com</h5>
+    <a href="{{ url_for('index') }}"><img class="Logo" src="../static/img/Logo.png" alt="logopagina" width="60px" height="60px"></a>
+
+    <!--BR es un Salto de linea-->
+            <!--Inicio navegación-->
+
+            <a class="Inicio" href="{{ url_for('iniciosesion') }}">Iniciar Sesión</a>
+            <a class="carrito_compras" href="{{ url_for('carrito') }}">
+              <i class="bi bi-cart3"></i></a><!-- Este es el ícono del carrito -->
+
+        <input class="buscador" placeholder="Buscador">
+    </header>
+
+
+        <!--Menú-->
+        <nav class="menu">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                <li><a href="">Categorías</a>
+                    <ul>
+                        <li><a href="{{ url_for('mercado') }}">SuperMercado</a></li>
+                    </ul>
+                </li>
+            
+                <li><a href="{{ url_for('cupones') }}">Cupones</a></li>
+                <li><a href="{{ url_for('ayuda') }}">Ayuda</a></li></li>
+            </ul>
+        </nav>
+
+      <!--terminos y condiciones-->
+
+    <main class="terminoscondiciones">
+        <h1>Términos y condiciones de uso del sitio</h1>
+        <h3>1. Aceptación de los Términos</h3>
+        <p>El uso de la plataforma implica la aceptación de estos términos en su totalidad.</p>
+        <h3>2. Modificación de los Términos</h3>
+        <p>[Nombre del Proyecto] se reserva el derecho de modificar estos términos en cualquier momento, notificándolo a los usuarios por medio de la plataforma o correo electrónico.</p>
+        <h3>3. Registro de Usuario</h3>
+        <p>Para utilizar ciertos servicios, es necesario registrarse, proporcionando información veraz y manteniéndola actualizada.</p>
+        <h3>4. Privacidad de la Cuenta</h3>
+        <p>Cada usuario es responsable de mantener la confidencialidad de su cuenta y contraseña.</p>
+        <h3>5. Edad Mínima de Uso</h3>
+        <p>Los usuarios deben ser mayores de 18 años para registrarse o, en su defecto, contar con el consentimiento de un adulto responsable.</p>
+        <h3>6. Responsabilidad del Usuario</h3>
+        <p>Los usuarios deben cumplir con todas las leyes locales, estatales y nacionales al utilizar la plataforma y son responsables de sus interacciones dentro del sitio.</p>
+        <h3>7. Responsabilidad de los Vendedores</h3>
+        <p>Los vendedores deben garantizar que sus productos cumplan con todas las normativas aplicables, evitando artículos prohibidos o peligrosos.</p>
+        <h3>8. Descripciones de Productos</h3>
+        <p>Los vendedores deben ofrecer descripciones precisas y completas de sus productos, incluyendo el estado, las dimensiones y las limitaciones.</p>
+        <h3>9. Prohibición de Productos Ilegales</h3>
+        <p>No se permite la venta de productos ilegales, falsificados o que infrinjan derechos de autor o de propiedad intelectual.</p>
+        <h3>10. Políticas de Envío</h3>
+        <p>Los vendedores son responsables de coordinar los envíos de acuerdo con la descripción y términos de entrega especificados en cada producto.</p>
+        <h3>11. Políticas de Devolución y Reembolso</h3>
+        <p>Cada vendedor es responsable de definir su política de devolución y reembolso, de acuerdo con las leyes locales y condiciones acordadas.</p>
+        <h3>12. Tarifas de Uso</h3>
+        <p>[Nombre del Proyecto] puede cobrar tarifas a los vendedores por el uso de sus servicios, notificando previamente los montos y condiciones.</p>
+    </main>
+
+                 
+                
+                <button id="volver-arriba" onclick="volverArriba()">Volver Arriba</button>
+    <!--Pie de pagina-->
+
+    <footer >
+        <ul>
+            <li><a href="{{ url_for('terminoscondiciones') }}">Términos y condiciones</a></li> 
+            <li><a href="{{ url_for('terminoscondiciones') }}">Promociones</a></li>
+            <li><a href="{{ url_for('terminoscondiciones') }}">Política de privacidad</a></li>
+            <a class="Icono" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+            <a class="Icono" href="https://web.whatsapp.com/"><i class="bi bi-whatsapp"></i></a>
+            <a class="Icono" href="https://www.instagram.com/?hl=es"><i class="bi bi-instagram"></i></a>
+            <a class="Icono" href=https://x.com/?lang><i class="bi bi-twitter-x"></i></a>
+        <p>&copy; 2024 CompraFácil.com. <br> Todos los derechos reservados. Colombia.</p>
+        
+
+    
+    </footer>
+    
+    <script src="../static/js/script.js"></script>
+</body>
+
+</html>

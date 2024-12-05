@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Encargada del responsive - autoajustable-->
+    <title>Proyecto Talento Tech</title>
+    <link rel="stylesheet" href="../static/style.css"> <!--Enlace para conexión con css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> <!--para instalación de iconos de Bootstrap-->
+</head>
+<body>
+
+    <header>
+
+        <!--Encabezado-->
+        
+    <h5>CompraFácil.com</h5>
+    <a href="{{ url_for('index') }}"><img class="Logo" src="../static/img/Logo.png" alt="logopagina" width="60px" height="60px"></a>
+
+    <!--BR es un Salto de linea-->
+            <!--Inicio navegación-->
+
+            <a class="Inicio" href="{{ url_for('iniciosesion') }}">Iniciar Sesión</a>
+            <a class="carrito_compras" href="{{ url_for('carrito') }}">
+              <i class="bi bi-cart3"></i></a><!-- Este es el ícono del carrito -->
+      
+              <input class="buscador" placeholder="Buscador">
+    </header>
+
+
+        <!--Menú-->
+        <nav class="menu">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                <li><a href="">Categorías</a>
+                    <ul>
+                        <li><a href="{{ url_for('mercado') }}">SuperMercado</a></li>
+                    </ul>
+                </li>
+            
+                <li><a href="{{ url_for('cupones') }}">Cupones</a></li>
+                <li><a href="{{ url_for('ayuda') }}">Ayuda</a></li></li>
+            </ul>
+        </nav>
+
+        <!--Inicio sección-->
+        <!--BANNER-->
+        <div class="claseslide-container">
+            <div class="b.container">
+               
+                <div class="banner">
+                    <img src="../static/img/banner960.png" alt="Publicidad" width="1519px" height="300px">
+                </div>
+                <div class="banner">
+                    <img src="../static/img/navidad.jpg" alt="Publicidad" width="1519px" height="300px">
+                </div>
+                <div class="banner">
+                    <img src="../static/img/fitness.jpg" alt="Publicidad" width="1519px" height="300px">
+                </div>
+            </div>
+        </div>
+        
+         
+                  <!-- imágenes organizadas en cuadricula-->
+
+                <div class="image-container">
+                    <div class="image.item">
+                    <img src="../static/img/gelatina-frutino-tripack-fresa-sandia-fresa-frutos-rojos-x-42-1.jpg" alt="imagen 1">
+                    <p>Gelatina Frutiño *3</p>
+                    <h3>$ 4.999</h3>
+                    </div>
+
+                    <div class="image.item">
+                    <img src="../static/img/esparcible-premier-con-sal-x-125-g-1.jpg" alt="imagen 2">
+                    <p>Esparcible 125g</p>
+                    <h3>$ 3.870</h3>
+                    </div>
+
+                    <div class="image.item">
+                    <img src="../static/img/endulzante-riopaila-senza-x-200-g-doy-pack-1.jpg" alt="imagen 3">
+                    <p>Enduzante 200g</p>
+                    <h3>$ 5.200</h3>
+                    </div>
+
+                    <div class="image.item">
+                    <img src="../static/img/huevo-campesino-huevos-oro-x-12-und-2.jpg" alt="imagen 4">
+                    <p>Huevos ORO 12/u</p>
+                    <h3>$ 9.800</h3>
+                    </div>
+
+                    <div class="image.item">
+                    <img src="../static/img/nuggets-de-pollo-bucanero-bolsa-congelado-x-300-g-1.jpg" alt="imagen 5">
+                    <p>Nuggets de pollo</p>
+                    <h3>$ 17.000</h3>
+                    </div>
+
+                    <div class="image.item">
+                    <img src="../static/img/pasta-de-tomate-hunt´s-sin-sal-lata-x-170-g-1.jpg" alt="imagen 6">
+                    <p>Pasta de tomate HUNT'S</p>
+                    <h3>$ 22.000</h3>
+                    </div>
+                </div>
+                <!--Fin IMagenes-->
+                
+                
+                <button id="volver-arriba" onclick="volverArriba()">Volver Arriba</button>
+    <!--Pie de pagina-->
+
+    <footer>
+        <ul>
+            <li><a href="{{ url_for('terminoscondiciones') }}">Términos y condiciones</a></li>
+            <li><a href="{{ url_for('terminoscondiciones') }}">Promociones</a></li>
+            <li><a href="{{ url_for('terminoscondiciones') }}">Política de privacidad</a></li>
+            <a class="Icono" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+            <a class="Icono" href="https://web.whatsapp.com/"><i class="bi bi-whatsapp"></i></a>
+            <a class="Icono" href="https://www.instagram.com/?hl=es"><i class="bi bi-instagram"></i></a>
+            <a class="Icono" href=https://x.com/?lang><i class="bi bi-twitter-x"></i></a>
+        <p>&copy; 2024 CompraFácil.com. <br> Todos los derechos reservados. Colombia.</p>
+        
+
+    
+    </footer>
+    
+    <script src="../static/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Encargada del responsive - autoajustable-->
+    <title>Proyecto Talento Tech</title>
+    <link rel="stylesheet" href="../static/style.css"> <!--Enlace para conexión con css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> <!--para instalación de iconos de Bootstrap-->
+</head>
+<body>
+
+    <header>
+
+        <!--Encabezado-->
+        
+    <h5>CompraFácil.com</h5>
+    <a href="{{ url_for('index') }}"><img class="Logo" src="../static/img/Logo.png" alt="logopagina" width="60px" height="60px"></a>
+    
+    <!--BR es un Salto de linea-->
+            <!--Inicio navegación-->
+
+            <a class="Inicio" href="{{ url_for('iniciosesion') }}">Iniciar Sesión</a>
+            <a class="carrito_compras" href="{{ url_for('carrito') }}">
+            <i class="bi bi-cart3"></i></a><!-- Este es el ícono del carrito -->
+            <input class="buscador" placeholder="Buscador">
+
+        </header>
+    </header>
+
+
+        <!--Menú-->
+        <nav class="menu">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                <li><a href="">Categorías</a>
+                    <ul>
+                        <li><a href="{{ url_for('mercado') }}">SuperMercado</a></li>
+                    </ul>
+                </li>
+            
+                <li><a href="{{ url_for('cupones') }}">Cupones</a></li>
+                <li><a href="{{ url_for('ayuda') }}">Ayuda</a></li></li>
+            </ul>
+        </nav>
+
+        <!--Inicio sección-->
+        <!--BANNER-->
+        <div class="claseslide-container">
+            <div class="b.container">
+               
+                <div class="banner">
+                    <img src="../static/img/banner960.png" alt="Publicidad" width="1519px" height="300px">
+                </div>
+                <div class="banner">
+                    <img src="../static/img/navidad.jpg" alt="Publicidad" width="1519px" height="300px">
+                </div>
+                <div class="banner">
+                    <img src="../static/img/fitness.jpg" alt="Publicidad" width="1519px" height="300px">
+                </div>
+            </div>
+        </div>
+        
+         
+                  <!-- imágenes organizadas en cuadricula-->
+
+                <div class="image-container">
+                    <div class="image.item">
+                    <img src="../static/img/iphone.jpg" alt="imagen 1">
+                    <p>Iphone 16 pro</p>
+                    <h3>$ 7.799.999</h3>
+                    </div>
+
+                    <div class="image.item">
+                    <img src="../static/img/samsung.jpg" alt="imagen 2">
+                    <p>Samsung S24 Ultra</p>
+                    <h3>$ 3.929.000</h3>
+                    </div>
+
+                    <div class="image.item">
+                    <img src="../static/img/Zflip.jpg" alt="imagen 3">
+                    <p>Samsung zFlip 6</p>
+                    <h3>$ 3.799.999</h3>
+                    </div>
+
+                    <div class="image.item">
+                    <img src="../static/img/Laptop.jpg" alt="imagen 4">
+                    <p>Hp Pavilion gamin</p>
+                    <h3>$ 3.380.000</h3>
+                    </div>
+
+                    <div class="image.item">
+                    <img src="../static/img/Googlepixel8pro.jpg" alt="imagen 5">
+                    <p>Google Pixel 8 pro <br> vale 5000</p>
+                    <h3>$ 4.759.000</h3>
+                    </div>
+
+                    <div class="image.item">
+                    <img src="../static/img/Ducati.jpg" alt="imagen 6">
+                    <p>Ducati Panigale V4 Maisto 1:18</p>
+                    <h3>$ 65.000</h3>
+                    </div>
+                </div>
+                <!--Fin IMagenes-->
+                
+                <!--GRÁFICOS-->
+                
+
+                <!--GRÁFICOS en tabla-->
+
+
+                <div class="graph_container">
+                    <div class="graph.item">
+                        <img src="{{ img_barras }}" alt="Gráfico de precios de productos">
+                    </div>
+                                
+                <!-- Gráfico de pie -->
+
+                    <div class="graph.item">
+                        <img src="{{ img_pie }}" alt="Gráfico de distribución de ratings">
+                    </div>
+                    
+                </div>
+
+                <!--FIN GRÁFICOS-->
+
+
+                
+                <button id="volver-arriba" onclick="volverArriba()">Volver Arriba</button>
+    
+    <!--Pie de pagina-->
+
+    <footer>
+        <ul>
+            <li><a href="{{ url_for('terminoscondiciones') }}">Términos y condiciones</a></li>
+            <li><a href="{{ url_for('terminoscondiciones') }}">Promociones</a></li>
+            <li><a href="{{ url_for('terminoscondiciones') }}">Política de privacidad</a></li>
+            <a class="Icono" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+            <a class="Icono" href="https://web.whatsapp.com/"><i class="bi bi-whatsapp"></i></a>
+            <a class="Icono" href="https://www.instagram.com/?hl=es"><i class="bi bi-instagram"></i></a>
+            <a class="Icono" href=https://x.com/?lang><i class="bi bi-twitter-x"></i></a>
+        <p>&copy; 2024 CompraFácil.com. <br> Todos los derechos reservados. Colombia.</p>
+        
+
+    
+    </footer>
+
+    <script src="../static/js/script.js">
+
+    </script>
+</body>
+
+</html>

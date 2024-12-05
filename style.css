@@ -1,0 +1,779 @@
+/*estilo general*/
+
+/* Con . llamas una clase*/
+/* Con # llamas un ID*/
+
+body{
+    justify-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    left: 0px;
+
+}
+
+/* cabecera */
+
+
+
+
+header{
+    background-color: #f3ff00;
+    color: black;
+    position: absolute;
+    width: 100%; /*ancho cabecera*/
+    height: 100px;
+    padding: 0 20px;
+    top: 0;
+    left: 0;
+}
+
+
+header h5{
+    color: black;
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 20px;
+    margin-top: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+.Logo{
+    position: absolute;
+    left: 50px;
+    top: 10px;
+}
+
+.carrito_compras{
+    position: absolute;
+    right: 100px;
+    top: 15px;
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
+/*  estilo imágenes tabla */
+
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* tres columnas, cada una toma 1 fracción del espacio */
+    gap: 10px; /* Espacio entre las imágenes */
+    justify-content: center;
+    max-width: 1000px;
+    margin: 450px auto;
+}
+
+
+.image.item{
+    text-align: center; /*centra la imágen y el texto */
+}
+
+.image.item{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;   
+}
+
+
+.image-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+/*--------- PRUBA IMAGENES CON EFECTOS   ***************************/
+/**********  B A N N E R  **************************/
+
+.banner-slide {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.banner-slide.active {
+    opacity: 1;
+}
+
+.b.container{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    height: 500px;
+    top: 0px;
+}
+
+.banner {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Reducir a 0.5s */
+}
+
+@keyframes fade-in-out {
+    0%, 40% {
+        opacity: 1;
+    }
+    45%, 100% {
+        opacity: 0;
+    }
+}
+
+.banner:nth-child(1) {
+    animation: fade-in-out 9s infinite;
+}
+
+.banner:nth-child(2) {
+    animation: fade-in-out 9s infinite 6s;
+}
+
+.banner:nth-child(3) {
+    animation: fade-in-out 9s infinite 3s;
+}
+
+
+/*---------FIN PRUBA IMAGENES CON EFECTOS*/
+
+
+/* estilo imágenes tabla */ 
+/*----------------------------------------------------------------------------------------------------*/
+
+
+
+/*Titulo CompraFacil debajo del Logo*/
+
+.Inicio{
+    color: black;
+    font-style: none;
+    position: relative;
+    float: right;
+    right: 50px;
+    top: 50px;
+}
+
+.buscador{
+    position: absolute;
+    margin-top: 30px;
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+
+
+/*******************************************   Menú desplegable   *********************************/
+
+
+
+
+nav{
+    background-color: black;
+    overflow: hidden;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    left: 0;
+}
+
+nav ul{ /* Barra Menu*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    margin: 10px 10px;
+    float: left;
+}
+
+nav ul li a{ /*Menú*/
+
+    display: inline;
+    color: white;
+    text-align: left;
+    padding: 5px 30px;
+    text-decoration: none; 
+}
+
+nav ul li a:hover{
+    color: yellow;
+}
+
+/*Sub menú*/
+
+nav ul li ul{ /*Menu desplegable categorias*/
+    display: none;
+    position: fixed;
+    background-color: black;
+}
+
+
+nav ul li:hover ul{
+    display: block;
+    overflow: visible;
+}
+
+nav ul li ul li{
+    float:none;
+}
+
+/*BANNER*/
+
+.banner{
+    z-index: -1;
+    background-size: 100% auto;
+    height: auto;
+    width: 100%;          /*Ancho Banner*/
+    position: absolute;
+    top: 138px;
+    left: 0px;
+}
+
+/*Sección principal*/
+
+section{
+    margin-top: 0px;
+    padding: 20px;
+    text-align: left;
+    display: block; /*Display tipo bloque para imagenes de compra*/
+}
+
+
+
+section p{
+    color: black;
+}
+
+
+/********************************   BOTON VOLVER ARRIBA    *******************************/
+
+#volver-arriba{
+    position:  absolute;
+    top: 3000px;
+    right: 30px;
+    bottom: 20px;
+    background-color: black;
+    color: yellow;
+    border: none;
+    border-radius: 10%;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+volver-arriba{
+    display: block;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#volver-arriba:hover{
+    background-color: yellow;
+    color: black;
+}
+
+
+
+
+/***************************************************************/
+
+/*------------------- HOJA    AYUDA ---------------------------*/
+
+/***************************************************************/
+
+.formatoformulario{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.contact_form{
+    background-color: white;
+    padding: 20px;
+    max-width: 500px; /* Ancho maximo del formulario */
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.contact_form h2{
+    margin-bottom: 20px;
+    font-style: bold;
+}
+
+.contact_form label{
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.contact_form input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+
+}
+
+.contact_form button{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.contact_form button:hover{
+    background-color: #45a049;
+}
+
+.contact_form textarea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 100px;
+}
+
+.resultado{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/***************************************************************/
+
+/*------------------- HOJA    CARRITO  ---------------------------*/
+
+/***************************************************************/
+
+/* Estilos generales */
+
+
+/* Contenedor del carrito */
+.carrito-container {
+    background-color: white;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+/* Encabezado del carrito */
+.carrito-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Lista de productos en el carrito */
+.carrito-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Lista de productos en el carrito */
+.carrito-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Item del carrito */
+.carrito-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+/* Imagen del producto */
+.carrito-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+.carrito-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.carrito-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.item-info {
+    align-items: center;
+    margin-right: 80px; /*Ajuste texto centro información celulares*/
+    flex: 1;
+}
+
+.item-info h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.item-info p {
+    margin: 5px 0;
+    color: #999;
+}
+
+.eliminar-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.eliminar-btn:hover {
+    background-color: #e60000;
+}
+
+/* Total y botón de compra */
+.total {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.total p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.comprar-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.comprar-btn:hover {
+    background-color: #45a049;
+}
+
+
+
+
+
+/******************************************************************************/
+
+/***************   FORMATO DE LA PÁGINA TÉRMINOS Y CONDICIONES *****************/
+
+/******************************************************************************/
+
+
+.terminoscondiciones {
+    text-align: left;
+    background-color: #f7f4f4;
+    color: black;
+    text-align: right;
+    padding-top: 130px;
+    margin-top: 20px;
+    width: 100%;
+    left: 0px;
+  }
+  
+  .terminoscondiciones h3,
+  .terminoscondiciones p {
+    text-align: left;
+    background-color: #f7f4f4;
+    color: black;
+  }
+  
+  /*-------------------------------------------------------------*/
+  
+  /*Formato cupones*/
+  
+  /*Formulario ingresar cupones*/
+  .cupon-formulario {
+    width: 100%; /* Ancho completo */
+    max-width: 300px; /* Ancho máximo del formulario */
+    margin: 150px 0 0 1px; /* Margen superior y alineación a la izquierda */
+  }
+  
+  /* Contenedor del código del cupón */
+  .cupon-code {
+    background-color: #f9f9f9; /* Fondo claro */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  /* Título del formulario */
+  .cupon-code h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .cupon-code input[type="text"] {
+    width: 100%; /* Ancho completo */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px;
+    font-size: 1em;
+  }
+  
+  /* Botón de envío */
+  .submit-button {
+    padding: 8px 15px;
+    background-color: #007bff; /* Fondo azul */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    width: 100%; /* Ancho completo para que se vea uniforme */
+    text-align: center;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3; /* Color al pasar el cursor */
+  }
+  
+  /*------------------------------------------------------------------------------*/
+  
+  /*  estilo imágenes tabla */
+  
+  .cupon-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 40px; /* Espacio entre las cajas de los cupones */
+    justify-content: center;
+    max-width: 900px;
+    margin: 10px auto; /* Centrado del contenedor */
+  }
+  
+  /**********************   Tarjeta de cada cupón   *****************/
+  .cupon-item {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*sombra*/
+  }
+  
+  /* Imagen de cada cupón */
+  .cupon-item img {
+    width: 60px; /* Ajuste del tamaño de imagen */
+    height: 70px;
+    border-radius: 8px;
+    margin-right: 15px;
+    object-fit: cover;
+  }
+  
+  /* Texto de cada cupón */
+  .text-content h3 {
+    margin-top: 1px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .text-content p {
+    margin-top: 4px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Estilos para el botón */
+  #cupon {
+    display: block;
+    margin: 10px auto 0;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    text-align: center;
+  }
+  
+  #cupon:hover {
+    background-color: #0056b3;
+  }
+  
+
+/******************************************************************************/
+
+/***************   FORMATO DE LA PÁGINA INICIO DE SESION *****************/
+
+/******************************************************************************/
+
+    /* Estilos generales */
+    .iniciosesion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f2f5;
+    }
+  
+    .contact_form {
+        background-color: #fff;
+        padding: 20px 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+    }
+  
+    /* Estilos del formulario */
+    
+    .contact_form label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+    }
+  
+    .contact_form input[type="email"],
+    .contact_form input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+  
+    .contact_form button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+    }
+  
+    .contact_form button:hover {
+        background-color: #45a049;
+    }
+  
+    #resultado {
+        margin-top: 15px;
+        color: red; /* Puedes cambiar el color según la respuesta */
+    }
+  
+
+/*********************************************    Stilo Gráficos en linea     ***********************************************/
+
+
+.graph_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* tres columnas, cada una toma 1 fracción del espacio */
+    gap: 10px; /* Espacio entre las imágenes */
+    justify-content: center;
+    max-width: 1000px;
+    margin: 450px auto;
+}
+
+
+
+
+
+
+    
+/********************************************    Píe de pagina    **************************************/
+
+footer{
+    text-align: center;
+    background-color:#dadada;
+    color: black;
+    text-align: left;
+    padding: 10px 0px;
+    position:relative;
+    bottom: 0px;
+    width: 100%; 
+}
+
+footer p{
+    text-align: center;
+    color: black;
+    margin-top: 50px;
+}
+
+footer ul li{
+    text-align: center;
+    margin-right: 15px;
+    display: inline;
+}
+
+footer ul li a{
+    top: 10px;
+    text-align: center;
+    text-decoration: none;
+    margin: 100px;
+    color: black;
+}
+
+footer ul a{
+    top: 10px;
+    text-align: center;
+    position: relative;
+    margin-left: 20px;    
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: yellow; /* Colorea los enlaces al pasar el mouse */
+}
+
+.piecarrito{
+    position: absolute;
+    bottom: 0px;
+}
+
